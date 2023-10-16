@@ -1,0 +1,9 @@
+<div>
+  <button class="btn btn-primary" (click)="diminuirValor()">-</button>
+  <input type="text" [value]="valor" readonly #campoInput />
+  <button class="btn btn-primary" (click)="aumentarValor()">+</button>
+  <br>
+  <br>
+  <p>Lodash</p>
+  <p *ngFor="let iten of list">{{ iten }}</p>
+</div>

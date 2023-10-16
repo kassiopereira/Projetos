@@ -1,0 +1,22 @@
+<h1>
+
+    <i
+      class="bi"
+      [ngClass]="{'bi-star':meuFavorito, 'bi-star-fill': !meuFavorito}"
+
+      (click)="onClick()"
+    ></i>
+  </h1>
+
+
+
+<div>
+
+<button type="button" class="btn btn-primary" (click)="onClick()">Teste </button>
+</div>
+
+
+<div>
+<h1>{{tarefa.desc}}</h1>
+<p>{{tarefa.funcionario.nome}}</p>
+</div>

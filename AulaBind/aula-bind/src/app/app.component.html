@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFirstAppContent">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseFirstAppContent"
+          aria-expanded="false"
+          aria-controls="collapseFirstAppContent"
+        >
+          Data Binding
+        </button>
+      </h2>
+      <div
+        id="collapseFirstAppContent"
+        class="accordion-collapse collapse"
+        aria-labelledby="headingFirstAppContent"
+        data-bs-parent="#accordionExample"
+      >
+        <div class="accordion-body">
+          <app-data-binding></app-data-binding>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingSecondAppContent">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseSecondAppContent"
+          aria-expanded="false"
+          aria-controls="collapseSecondAppContent"
+        >
+          Cicle
+        </button>
+      </h2>
+      <div
+        id="collapseSecondAppContent"
+        class="accordion-collapse collapse"
+        aria-labelledby="headingSecondAppContent"
+        data-bs-parent="#accordionExample"
+      >
+        <div class="accordion-body">
+          <app-cicle
+            [valorInicial]="valorInicialApp"
+            *ngIf="!deletarCiclo"
+          ></app-cicle>
+          <button class="btn btn-primary" (click)="mudarValor()">
+            Mudar Valor
+          </button>
+          <button class="btn btn-primary" (click)="destruirCiclo()">
+            Mudar Valor
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

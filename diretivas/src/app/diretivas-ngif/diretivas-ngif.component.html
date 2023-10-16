@@ -1,0 +1,28 @@
+<h1>Diretivas *ngIF</h1>
+
+
+<div *ngIf="mostrarCursos">
+  Lista de cursos
+</div>
+<div *ngIf="!mostrarCursos">
+  Não tem cursos a serem listados
+</div>
+
+<button type="button" class="btn btn-success" (click)="onMostrarCurso()">Mostrar</button>
+<button type="button" class="btn btn-warning" (click)="offMostrarCurso()">Esconder</button>
+
+
+<div [hidden]="!mostrarCursos">
+  Lista de cursos
+</div>
+<div [hidden]="mostrarCursos">
+  Não tem cursos a serem listados
+</div>
+
+<div *ngIf="!mostrarCursos">
+  Não tem cursos a serem listados ngIF.
+</div>
+
+
+
+
