@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment.development';
 import { iCursos } from './curso-lista/Cursos';
-import { delay, tap } from 'rxjs';
+import { delay, take, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -16,5 +16,8 @@ export class CursosService {
   }
   getAll(){
     return this.http.get<iCursos[]>(this.url)
+  }
+  createCurso(curso: iCursos){
+    return this.http.post<iCursos[]>(this.url, curso).pipe(take(1))
   }
 }
